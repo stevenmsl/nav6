@@ -1,0 +1,5 @@
+- how header interact with its screen component
+  - TA-01
+- update header options for active screen from 
+  the mounted screen component
+  - TA-02

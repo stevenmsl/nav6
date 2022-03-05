@@ -5,10 +5,18 @@ import {RootStackParamList} from '../navigation/types';
 
 interface DetailsScreenProps
   extends NativeStackScreenProps<RootStackParamList, 'Details'> {}
-const DetailsScreen: React.FC<DetailsScreenProps> = ({navigation}) => {
+const DetailsScreen: React.FC<DetailsScreenProps> = ({route, navigation}) => {
+  let itemId = 0;
+  let otherParam = '';
+  if (route.params) {
+    itemId = route.params.itemId;
+    otherParam = route.params.otherParam;
+  }
   return (
     <View style={styles.Screen}>
       <Text>Details Screen</Text>
+      <Text>itemId:{itemId} </Text>
+      <Text>OtherParam:{otherParam} </Text>
       <Button
         title="Go to details... again"
         onPress={() => navigation.push('Details')}

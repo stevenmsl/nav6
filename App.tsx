@@ -1,9 +1,11 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import HomeScreen from './src/component/HomeScreen';
-import DetailsScreen from './src/component/DetailsScreen';
+import HomeScreen from './src/screens/HomeScreen';
+import DetailsScreen from './src/screens/DetailsScreen';
+import ProfileScreen from './src/screens/ProfileScreen';
 import {RootStackParamList} from './src/navigation/types';
+import CounterScreen from './src/screens/CounterScreen';
 /*
   - Stack.Navigator should contain Stack.Screen
     as its children
@@ -24,6 +26,12 @@ const App = () => {
           options={{title: 'Overview'}}
         />
         <Stack.Screen name="Details" component={DetailsScreen} />
+        <Stack.Screen
+          name="Profile"
+          component={ProfileScreen}
+          options={({route}) => ({title: route.params.name})}
+        />
+        <Stack.Screen name="Counter" component={CounterScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

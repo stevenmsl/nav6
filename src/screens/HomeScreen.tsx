@@ -15,7 +15,24 @@ const HomeScreen: React.FC<HomeScreenProps> = ({
       <Button
         title="Go to Details"
         onPress={() => {
-          navigation.navigate('Details');
+          navigation.navigate('Details', {
+            itemId: 86,
+            otherParam: 'anything you want here',
+          });
+        }}
+      />
+      <Button
+        title="Profile"
+        onPress={() => {
+          navigation.navigate('Profile', {
+            name: 'Arlo',
+          });
+        }}
+      />
+      <Button
+        title="Counter"
+        onPress={() => {
+          navigation.navigate('Counter');
         }}
       />
     </View>
