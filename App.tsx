@@ -6,6 +6,7 @@ import DetailsScreen from './src/screens/DetailsScreen';
 import ProfileScreen from './src/screens/ProfileScreen';
 import {RootStackParamList} from './src/navigation/types';
 import CounterScreen from './src/screens/CounterScreen';
+import AccountScreen from './src/screens/AccountScreen';
 /*
   - Stack.Navigator should contain Stack.Screen
     as its children
@@ -32,6 +33,11 @@ const App = () => {
           options={({route}) => ({title: route.params.name})}
         />
         <Stack.Screen name="Counter" component={CounterScreen} />
+        <Stack.Screen
+          name="Account"
+          component={AccountScreen}
+          options={{headerShown: false}}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

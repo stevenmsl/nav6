@@ -3,3 +3,9 @@
 - update header options for active screen from 
   the mounted screen component
   - TA-02
+- nested navigator
+  - define the param list to represent your nesting 
+    structure #TA-03
+  - define the child routes #TA-06  
+  - navigate from parent to child #TA-04
+  - navigate from child to parent #TA-05
