@@ -40,7 +40,7 @@ const HomeScreen: React.FC<HomeScreenProps> = ({
         <Button
           title="Account"
           onPress={() => {
-            /*#TA-04*/
+            /*#TA-04 */
             navigation.navigate('Account');
           }}
         />
