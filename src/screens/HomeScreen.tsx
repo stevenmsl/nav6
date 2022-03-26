@@ -53,6 +53,14 @@ const HomeScreen: React.FC<HomeScreenProps> = ({
             });
           }}
         />
+        <Text>No Nav Prop</Text>
+        <Button
+          title="Go To SignIn"
+          onPress={() => {
+            /*#TA-04 */
+            navigation.navigate('SignIn');
+          }}
+        />
       </View>
     </View>
   );

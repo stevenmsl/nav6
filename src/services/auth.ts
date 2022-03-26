@@ -1,1 +1,4 @@
-export const login = () => {};
+import {navigationRef} from '../navigation/types';
+export const signin = () => {
+  navigationRef.navigate('Home');
+};

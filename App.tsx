@@ -4,9 +4,11 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import HomeScreen from './src/screens/HomeScreen';
 import DetailsScreen from './src/screens/DetailsScreen';
 import ProfileScreen from './src/screens/ProfileScreen';
-import {RootStackParamList} from './src/navigation/types';
+import {RootStackParamList, navigationRef} from './src/navigation/types';
 import CounterScreen from './src/screens/CounterScreen';
 import AccountScreen from './src/screens/AccountScreen';
+import SignInScreen from './src/screens/SignInScreen';
+
 /*
   - Stack.Navigator should contain Stack.Screen
     as its children
@@ -18,7 +20,7 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const App = () => {
   return (
-    <NavigationContainer>
+    <NavigationContainer ref={navigationRef}>
       <Stack.Navigator initialRouteName="Home">
         {/* name prop contains the name of the route */}
         <Stack.Screen
@@ -38,6 +40,7 @@ const App = () => {
           component={AccountScreen}
           options={{headerShown: false}}
         />
+        <Stack.Screen name="SignIn" component={SignInScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

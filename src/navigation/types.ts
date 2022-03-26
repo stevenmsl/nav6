@@ -1,5 +1,5 @@
 import {NavigatorScreenParams} from '@react-navigation/native';
-
+import {createNavigationContainerRef} from '@react-navigation/native';
 /*#TA-03 nested navigator
   - child navigator
 */
@@ -22,4 +22,7 @@ export type RootStackParamList = {
        specifying any screen
   */
   Account: NavigatorScreenParams<TabParamList> | undefined;
+  SignIn: undefined;
 };
+
+export const navigationRef = createNavigationContainerRef<RootStackParamList>();
